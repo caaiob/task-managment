@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 20px;
+	padding: 0;
+	background-color: #f4f4f9;
+}
+
+header {
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+header h1 {
+	margin-bottom: 1rem;
+}
+
+section {
+	margin: 40px 0;
+}
+
+h2 {
+	color: #333;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 5px;
+}
+
+h3 {
+	color: #6c757d;
+	margin-bottom: 0.5rem;
+}
+
+#taskForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+#taskForm label,
+#taskForm input,
+#taskForm select,
+#taskForm div {
+	font-size: 14px;
+	padding: 8px;
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+	width: 100%;
+}
+
+#addTaskContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	width: 100%;
+}
+
+#addTaskButton {
+	background-color: #fff;
+	border: 2px solid black;
+	color: black;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+#addTaskButton:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#taskFormContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+form button[type="submit"] {
+	display: none;
+	font-size: 20px;
+	padding: 4px 10px;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+form button[type="submit"].visible {
+	display: block;
+}
+
+form button[type="submit"]:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.completed {
+	text-decoration: line-through;
+	color: #888;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	background-color: #fff;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	padding: 8px;
+	margin-right: 10px;
+	width: 200px;
+}
+
+button {
+	font-family: 'Courier New', Courier, monospace;
+	padding: 8px 15px;
+	font-size: 1em;
+	background-color: #5cb85c;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #333;
+	color: white;
+}
+
+/* Estilos das tabelas de tarefas */
+.task-table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+.task-table th,
+.task-table td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #333;
+}
+
+.task-table th {
+	background-color: #333;
+	color: #fff;
+}
+
+.task-table td {
+	vertical-align: middle;
+}
+
+.task-table td .edit-button, .task-table td .remove-button {
+	cursor: pointer;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.completed {
+	text-decoration: line-through;
+	color: green;
+}
+
+.task-table td:first-child,
+.task-table th:first-child {
+	width: 5%;
+}
+
+.task-table td:nth-child(2),
+.task-table th:nth-child(2) {
+	width: 5%;
+}
+
+.task-table td:nth-child(3),
+.task-table th:nth-child(3) {
+	width: 10%;
+}
+
+.task-table td:last-child,
+.task-table th:last-child {
+	width: 20%;
+}

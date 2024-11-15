@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerenciamento de Tarefas</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <h1>Gerenciamento de Tarefas</h1>
+        </header>
+        <hr>
+        <section>
+            <h2>Curto Prazo</h2>
+            <table id="curto-prazo-list" class="task-table"></table>
+            <table id="morning-list" class="task-table"></table>
+            <table id="afternoon-list" class="task-table"></table>
+            <table id="evening-list" class="task-table"></table>
+        </section>
+
+        <section>
+            <h2>Médio Prazo</h2>
+            <table id="medio-prazo-list" class="task-table"></table>
+        </section>
+    
+        <section>
+            <h2>Longo Prazo</h2>
+            <table id="longo-prazo-list" class="task-table"></table>
+        </section>
+
+        <div id="addTaskContainer">
+            <h2>Adicionar Tarefa</h2>
+            <button id="addTaskButton">+</button>
+        </div>
+
+        <div id="taskFormContainer" style="display: none;">
+            <form id="taskForm">
+                <label for="taskType">Tipo de Tarefa:</label>
+                <select id="taskType">
+                    <option value="">Selecione</option>
+                    <option value="diaria">Tarefa Diária</option>
+                    <option value="projeto">Projeto</option>
+                </select>
+
+                <div id="taskNameContainer" style="display: none;">
+                    <label for="taskInput">Nome da Tarefa:</label>
+                    <input type="text" id="taskInput" name="task" required>
+                </div>
+
+                <div id="dailyFields" style="display: none;">
+                    <label for="taskTime">Horário:</label>
+                    <input type="time" id="taskTime">
+                </div>
+
+                <div id="projectFields" style="display: none;">
+                    <label for="taskDueDate">Data de Conclusão:</label>
+                    <input type="date" id="taskDueDate">
+                </div>
+
+                <div id="taskCategoryContainer" style="display: none;">
+                    <label for="taskCategory">Prazo:</label>
+                    <select id="taskCategory">
+                        <option value="curto-prazo">Curto Prazo</option>
+                        <option value="medio-prazo">Médio Prazo</option>
+                        <option value="longo-prazo">Longo Prazo</option>
+                    </select>
+                </div>
+
+                <button type="submit">Salvar</button>    
+            </form>
+        </div>   
+
+        <footer>
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <p>Dados de contato: exemplo@dominio.com</p>
+        </footer>
+    
+        <script src="script.js"></script>
+</body>
+</html>
